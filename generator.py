@@ -4,9 +4,9 @@ import string
 
 def generate_password(length: int = 16, use_lowercase: bool = True, use_uppercase: bool = True, use_digits: bool = True, use_symbols: bool = True) -> str:
 #length - длина, use_lowercase - использовать строчные буквы, use_uppercase - использовать заглавные, use_digits - испл цифры, use_symbols - испл символы
-
-    if length < 1:
-        raise ValueError("Длина пароля должна быть положительной")
+    
+    if not isinstance(length, int) or isinstance(length, bool):
+        raise ValueError("Длина должна быть целым числом")
 
     if length < 16:
         raise ValueError("Для безопасности пароля длинна должна быть больше 16")
