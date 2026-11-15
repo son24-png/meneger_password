@@ -1,1 +1,1 @@
-# meneger_password
+# manager_password
